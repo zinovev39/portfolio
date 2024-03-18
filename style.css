@@ -8,12 +8,10 @@
   src: url("fonts/MontserratAlternates-SemiBold.ttf") format("truetype");
   font-weight: bold;
 }
-html,
-body {
-  margin: 0 auto;
+* {
+  margin: 0;
   padding: 0;
   font-family: Montserrat Alternates;
-  max-width: 1300px;
   color: #2a2a2a;
 }
 
@@ -21,66 +19,26 @@ h1,
 h2,
 h3,
 p {
-  margin: 0;
-}
-
-h1 {
-  font-size: 100px;
-  margin-bottom: 40px;
   line-height: 140%;
 }
 
-h2 {
-  font-size: 40px;
-  margin-bottom: 20px;
-  font-weight: 600;
-  line-height: 140%;
-}
-
-h3 {
-  font-size: 40px;
-  margin-bottom: 20px;
-  font-weight: 700;
-  line-height: 140%;
-}
-
-p {
-  font-size: 25px;
-}
-
-header {
-  border-bottom: 1px solid #eeeeee;
-  padding: 20px 0;
-  margin-bottom: 50px;
-}
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header nav .phone {
+/* Header */
+.header .phone {
   font-size: 20px;
   font-weight: 600;
-}
-header nav .phone a {
   text-decoration: none;
   color: #2a2a2a;
 }
-header nav .phone a:hover {
+.header .phone:hover {
   color: rgb(255, 135, 209);
 }
-header nav .menu a {
-  margin-right: 30px;
-  text-decoration: none;
+.header .menu a {
   color: #2a2a2a;
-  position: relative;
   font-size: 20px;
   font-weight: 600;
+  text-decoration: none;
 }
-header nav .menu a:last-child {
-  margin-right: 0;
-}
-header nav .menu a:before {
+.header .menu a:before {
   content: "";
   position: absolute;
   bottom: -4px;
@@ -90,94 +48,43 @@ header nav .menu a:before {
   background: rgb(255, 135, 209);
   transition: width 0.5s ease;
 }
-header nav .menu a:hover {
+.header .menu a:hover {
   color: #2a2a2a;
 }
-header nav .menu a:hover:before {
+.header .menu a:hover:before {
   width: 100%;
 }
-header nav .social img {
+.header .social img {
   transition: transform 0.6s ease;
 }
-header nav .social img:hover {
+.header .social img:hover {
   transform: rotate(360deg);
 }
 
+/* Content */
 .hint {
   font-family: "Montserrat Alternates";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 140%;
+  text-transform: uppercase;
 }
 
-.banner {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 100px;
-}
-.banner .desc {
-  max-width: 618px;
-  align-self: center;
-}
-.banner .desc p {
-  margin-bottom: 10px;
-}
-.banner .desc p:last-child {
-  margin-bottom: 0;
-}
-
-.about {
-  margin-bottom: 100px;
-}
-.about p {
-  margin-bottom: 10px;
-}
-.about p:last-child {
-  margin-bottom: 0;
-}
-
-.portfolio {
-  margin-bottom: 100px;
-}
-.portfolio .items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 15px;
-}
-.portfolio .items img {
+.cards img {
   border: 1px solid #eeeeee;
   border-radius: 20px;
   transition: box-shadow 0.6s ease;
 }
-.portfolio .items img:hover {
+.cards img:hover {
   box-shadow: 1px 1px 20px 0 rgba(42, 42, 42, 0.15);
 }
 
-footer {
-  border-top: 1px solid #eeeeee;
-  padding-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-footer .menu {
-  margin-bottom: 30px;
-}
-footer .menu a {
-  margin-right: 30px;
-  text-decoration: none;
-  color: #2a2a2a;
+/* Footer */
+.menu a {
   position: relative;
   font-size: 20px;
   font-weight: 600;
+  color: #2a2a2a;
+  text-decoration: none;
 }
-footer .menu a:last-child {
-  margin-right: 0;
-}
-footer .menu a:before {
+.menu a:before {
   content: "";
   position: absolute;
   bottom: -4px;
@@ -187,21 +94,19 @@ footer .menu a:before {
   background: rgb(255, 135, 209);
   transition: width 0.5s ease;
 }
-footer .menu a:hover {
+.menu a:hover {
   color: #2a2a2a;
 }
-footer .menu a:hover:before {
+.menu a:hover:before {
   width: 100%;
 }
-footer .button {
-  margin-bottom: 50px;
-}
-footer .button .btn {
-  background: #2a2a2a;
+
+.btn {
+  padding: 5px 30px;
   border-radius: 20px;
-  padding: 10px 30px;
+  background: #2a2a2a;
 }
-footer .button .btn a {
+.btn a {
   font-size: 20px;
   font-weight: 600;
   color: #ffffff;
@@ -209,9 +114,10 @@ footer .button .btn a {
   display: flex;
   align-items: center;
 }
-footer .button .btn a img {
+.btn a img {
   margin-left: 10px;
 }
-footer .button .btn:hover {
+.btn:hover {
+  background: #2a2a2a;
   box-shadow: 1px 1px 20px 0 rgba(42, 42, 42, 0.15);
 }/*# sourceMappingURL=style.css.map */
